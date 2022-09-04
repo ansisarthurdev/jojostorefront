@@ -81,6 +81,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   padding: 0 0 0 40px;
   justify-content: center;
+  max-width: 1200px;
 }
 `
 
