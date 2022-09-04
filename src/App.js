@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Header from './components/Header'
 import UserImage from './components/UserInfo'
 import StoreItem from './components/StoreItem'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -66,6 +67,8 @@ const App = () => {
           />
         ))}  
       </div>
+
+      <Footer />
     </Wrapper>
   )
 }

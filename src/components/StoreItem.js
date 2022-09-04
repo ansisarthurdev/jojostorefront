@@ -22,6 +22,10 @@ overflow-y: hidden;
     .item-image {
         transform: scale(1.2) translateY(-20px);
     }
+
+    .item-price {
+        opacity: 1;
+    }
 }
 
 .item-name {
@@ -32,8 +36,9 @@ overflow-y: hidden;
 
 .item-price {
     font-size: .9rem;
-    opacity: .8;
+    opacity: .6;
     margin: 0 0 10px 0;
+    transition: transform .2s cubic-bezier(.2,.43,.6,1.07);
 }
 
 .item-image {
