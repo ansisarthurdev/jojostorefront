@@ -52,7 +52,7 @@ const SingleItem = styled.div`
   top: 0;
   max-width: 1200px;
   width: 80vw;
-  height: 100vh;
+  height: 500px;
   background: white;
   display: flex;
   justify-content: center;
