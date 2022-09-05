@@ -1,10 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//redux
+import { useDispatch } from 'react-redux'
+import { updateItem } from '../features/appSlice'
+
 const StoreItem = ({ image, name, price }) => {
+
+    const dispatch = useDispatch();
+
+    const openItem = () => {
+        console.log(name, image, price);
+        dispatch(updateItem({name: name, image: image, price: price}))
+    }
+
   return (
     <Wrapper>
-        <img className='item-image' src={image} alt='' />
+        <img className='item-image' src={image} alt='' onClick={() => openItem()}/>
         <p className='item-name'>{name}</p>
         <p className='item-price'>€{price}</p>
     </Wrapper>

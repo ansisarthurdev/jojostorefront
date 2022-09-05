@@ -7,6 +7,9 @@ import UserImage from './components/UserInfo'
 import StoreItem from './components/StoreItem'
 import Footer from './components/Footer'
 
+import { Provider } from 'react-redux'
+import { store } from './features/store'
+
 const App = () => {
 
   const items = [{
@@ -15,15 +18,15 @@ const App = () => {
     price: '5,99'
   },{
     image: '../images/clothes2.jfif',
-    name: 'Regular Fit Hoodie',
+    name: 'Regular Fit Hoodie 1',
     price: '29,99'
   },{
     image: '../images/clothes3.jfif',
-    name: 'Relaxed Fit Hoodie',
+    name: 'Relaxed Fit Hoodie 2',
     price: '29,99'
   },{
     image: '../images/clothes4.jfif',
-    name: 'Relaxed Fit Hoodie',
+    name: 'Relaxed Fit Hoodie 3',
     price: '29,99'
   },{
     image: '../images/clothes5.jfif',
@@ -53,7 +56,9 @@ const App = () => {
 
   ]
 
+
   return (
+    <Provider store={store}>
     <Wrapper>
       <Header />
       <UserImage source='../images/portrait' />
@@ -61,6 +66,7 @@ const App = () => {
       <div className='store-items'>
         {items.map(item => (
           <StoreItem 
+            key={item?.name}
             image={item?.image}
             name={item?.name}
             price={item?.price}
@@ -70,8 +76,11 @@ const App = () => {
 
       <Footer />
     </Wrapper>
+    </Provider>
   )
 }
+
+
 
 const Wrapper = styled.div`
 

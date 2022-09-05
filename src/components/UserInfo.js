@@ -17,7 +17,7 @@ const UserInfo = () => {
         </div>
 
         <div className='user-info-search'>
-          <input type='text' placeholder='Enter your email address..' />
+          <input type='email' placeholder='Enter your email address..' />
           <div className='user-info-btn'>Subscribe</div>
         </div>
       </div>
